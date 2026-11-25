@@ -2,6 +2,10 @@
 
 一个 Windows 桌面悬浮窗，用来查看 Codex 的 5 小时和每周剩余额度、重置时间，以及本机今日 token 用量。
 
+<p align="center">
+  <img src="assets/mascot/gpt-dragon/layers-v2/body-idle.png" alt="GPT 娘默认形象" width="180">
+</p>
+
 ## 安装和使用
 
 当前版本为 **Rust 0.2.9**，支持 Windows x64，无需安装 .NET。提供中英文安装向导，也可直接运行免安装版。
