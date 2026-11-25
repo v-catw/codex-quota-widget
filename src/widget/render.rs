@@ -2,9 +2,9 @@ use std::{ffi::c_void, mem::size_of, ptr::null_mut};
 use windows_sys::Win32::{Foundation::*, Graphics::{Gdi::*, GdiPlus::*}, UI::{Shell::SHCreateMemStream, WindowsAndMessaging::*}};
 
 const PARGB32: i32 = 0x000E200B;
-const ASSET_IDLE: &[u8] = include_bytes!("../../../../../../assets/mascot/gpt-dragon/layers-v2/body-idle.png");
-const ASSET_HAPPY: &[u8] = include_bytes!("../../../../../../assets/mascot/gpt-dragon/layers-v2/body-happy.png");
-const ASSET_WING: &[u8] = include_bytes!("../../../../../../assets/mascot/gpt-dragon/layers-v2/wing-left.png");
+const ASSET_IDLE: &[u8] = include_bytes!("../../assets/mascot/gpt-dragon/layers-v2/body-idle.png");
+const ASSET_HAPPY: &[u8] = include_bytes!("../../assets/mascot/gpt-dragon/layers-v2/body-happy.png");
+const ASSET_WING: &[u8] = include_bytes!("../../assets/mascot/gpt-dragon/layers-v2/wing-left.png");
 
 pub fn wide(s: &str) -> Vec<u16> {
     s.encode_utf16().chain([0]).collect()

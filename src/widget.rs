@@ -346,7 +346,7 @@ fn tray(hwnd: HWND, operation: u32) -> bool {
 }
 
 fn application_icon() -> HICON {
-    let ico = include_bytes!("../../../../../assets/codex-quota-logo.ico");
+    let ico = include_bytes!("../assets/codex-quota-logo.ico");
     let Some(count) = ico.get(4..6).map(|bytes| u16::from_le_bytes([bytes[0], bytes[1]])) else {
         return null_mut();
     };

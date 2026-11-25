@@ -35,7 +35,7 @@ fn window(value: &Value) -> Option<Window> {
     })
 }
 
-pub const DEMO: &str = include_str!("../../../../../testdata/usage-success.json");
+pub const DEMO: &str = include_str!("../testdata/usage-success.json");
 
 #[cfg(test)]
 mod tests {
@@ -46,9 +46,9 @@ mod tests {
         let demo = parse(DEMO).unwrap();
         assert_eq!(demo.five_hour.unwrap(), Window { remaining: 75, reset_at: Some(1790208000) });
         assert_eq!(demo.weekly.unwrap(), Window { remaining: 40, reset_at: Some(1790380800) });
-        let empty = parse(include_str!("../../../../../testdata/usage-empty-window.json")).unwrap();
+        let empty = parse(include_str!("../testdata/usage-empty-window.json")).unwrap();
         assert_eq!(empty.five_hour, None);
         assert_eq!(empty.weekly, None);
-        assert!(parse(include_str!("../../../../../testdata/usage-invalid.json")).is_err());
+        assert!(parse(include_str!("../testdata/usage-invalid.json")).is_err());
     }
 }

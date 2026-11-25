@@ -3,11 +3,12 @@
 !/.gitignore
 !/.gitattributes
 !/README.md
+!/Cargo.toml
+!/Cargo.lock
 !/src/
 /src/*
-!/src/native/
-/src/native/*
-!/src/native/rust/
+!/src/*.rs
+!/src/widget/
 **/target/
 !/installer/
 /installer/*

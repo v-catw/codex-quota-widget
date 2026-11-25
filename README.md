@@ -27,14 +27,13 @@
 Rust 版使用 Win32、GDI+ 和 WinHTTP。使用 Windows x64 MSVC 工具链，在仓库根目录执行：
 
 ```powershell
-$manifest = 'src/native/rust/codex-quota-widget-native/Cargo.toml'
-cargo test --locked --manifest-path $manifest
+cargo test --locked
 $env:RUSTFLAGS = '-C target-feature=+crt-static'
-cargo build --release --locked --manifest-path $manifest
+cargo build --release --locked
 ```
 
-在没有启动 Codex 时，可以给 EXE 传入 `--demo` 来预览界面。安装包构建步骤见 [Rust 开发说明](src/native/rust/codex-quota-widget-native/README.md)。
+生成的 EXE 位于 `target/release/codex-quota-widget-native.exe`。在没有启动 Codex 时，可以给 EXE 传入 `--demo` 来预览界面。使用 `--watch` 时，组件会在 Codex 退出后等待下一次启动。
 
-- [Rust 当前实现](src/native/rust/codex-quota-widget-native/)
+构建安装包时，将 Release EXE 复制到 `artifacts/rust/mascot-v0.2.9/CodexQuotaWidget-Rust-0.2.9-x64.exe`，再从仓库根目录运行 `ISCC.exe installer/CodexQuotaWidget-Rust.iss`。需要 Inno Setup 6。
 
 这是一个独立开发的工具。
