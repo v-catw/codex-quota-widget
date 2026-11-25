@@ -1,0 +1,6 @@
+{
+  "rate_limit": {
+    "primary_window": null,
+    "secondary_window": {}
+  }
+}
